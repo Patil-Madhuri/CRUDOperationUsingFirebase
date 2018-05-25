@@ -14,12 +14,24 @@ app.controller('appCtrl', function($scope, $firebase) {
   $asArray() returns the data from database in the form of array
 */
   $scope.DB = sync.$asArray();
+
+  /*
+    for title to display on toolbar
+  */
   $scope.title = 'Student App';
+
+/*
+  Initialize data as empty
+*/
   $scope.app = {
     name: '',
     sirname: '',
     contact: ''
   }
+
+  /*
+    Adding student data in firebase database
+  */
   $scope.add = function() {
     $scope.DB.$add($scope.app);
     $scope.app = {
@@ -28,9 +40,17 @@ app.controller('appCtrl', function($scope, $firebase) {
       contact: ''
     }
   }
+
+  /*
+    Editing student data in firebase database
+  */
   $scope.edit = function(value) {
     $scope.app = value
   }
+
+  /*
+    Removing student data from firebase database
+  */
   $scope.delete = function(item) {
     $scope.DB.$remove(item)
   }
