@@ -1,3 +1,10 @@
+<!-- /**********************************************************************************
+ *  Purpose         : CRUD operations using firebase
+ *  @file           : index.html
+ *  @author         : Madhuri chaudhari
+ *  @version        : 1.0
+ *  @since          : 25-05-2018
+ **********************************************************************************/ -->
 <html>
 <head>
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
@@ -18,24 +25,24 @@
   <md-button class="md-raised md-primary" ng-click="add()">Add</md-button>
 
   <table class="table table-striped" style="width:50%; padding-top: 10px;">
-    <thead>
-      <th>Name</th>
-      <th>Sirname</th>
-      <th>Contact</th>
-    </thead>
-
-    <tbody>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Sirname</th>
+          <th>Contact</th>
+        </tr>
       <tr ng-repeat="value in DB">
         <td>{{value.name}}</td>
         <td>{{value.sirname}}</td>
         <td>{{value.contact}}</td>
+        <md-divider></md-divider>
         <td>
-          <button type="button" class="btn btn-warning" ng-click="edit(value)">Edit</button>
+          <md-button style="background-color:#4CAF50;" ng-click="edit(value)">Edit</md-button>
           <md-button class="md-raised md-warn" ng-click="delete(value)">Remove</md-button>
-
         </td>
       </tr>
     </tbody>
+
   </table>
 
 
