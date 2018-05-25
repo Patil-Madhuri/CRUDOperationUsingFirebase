@@ -1,4 +1,4 @@
-var app = angular.module('app', ["firebase"])
+var app = angular.module('app', ['ngMaterial','firebase']);
 app.controller('appCtrl', function($scope, $firebase) {
   var ref = new Firebase("https://studentdemo-bf174.firebaseio.com");
   var sync = $firebase(ref);
