@@ -17,10 +17,13 @@
 </head>
 
 <body ng-app="app" ng-controller="appCtrl">
-  <h1>{{title}}</h1>
-  <input type="text" ng-model="app.name" placeholder="Enter name" />
-  <input type="text" ng-model="app.sirname" placeholder="Enter Sirname" />
-  <input type="text" ng-model="app.contact" placeholder="Enter contact" />
+
+  <md-toolbar style="height:50px;width:60%;">
+    <md-title>{{title}}</md-title>
+</md-toolbar>
+  <input type="text" ng-model="app.name" placeholder="Enter name" class="data"/>
+  <input type="text" ng-model="app.sirname" placeholder="Enter Sirname" class="data"/>
+  <input type="text" ng-model="app.contact" placeholder="Enter contact" class="data"/>
 
   <md-button class="md-raised md-primary" ng-click="add()">Add</md-button>
 
@@ -35,7 +38,6 @@
         <td>{{value.name}}</td>
         <td>{{value.sirname}}</td>
         <td>{{value.contact}}</td>
-        <md-divider></md-divider>
         <td>
           <md-button style="background-color:#4CAF50;" ng-click="edit(value)">Edit</md-button>
           <md-button class="md-raised md-warn" ng-click="delete(value)">Remove</md-button>
