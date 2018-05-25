@@ -1,0 +1,26 @@
+{
+  "name": "FirebaseProject",
+  "authors": [
+    "madhuripatil506 <madhuripatil506@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-filter": "^0.5.17",
+    "angular-jk-rating-stars": "^1.0.8",
+    "angular-material": "^1.1.8",
+    "angular-sanitize": "^1.6",
+    "angular-ui-router": "^1.0.15",
+    "firebase": "3.9.0",
+    "angularfire": "2.3.0"
+  }
+}
